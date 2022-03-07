@@ -59,6 +59,7 @@ function Home() {
             className={styles.numberInput}
             type="text"
             maxLength="10"
+            placeholder={"enter a number "}
             value={value}
             onChange={(e)=> onChange(e.target.value)} />
         <button
