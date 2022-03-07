@@ -1,3 +1,12 @@
+/**
+ * Checks if req.body is a number or not . if it is number then handler
+ * is called or else throws error.
+ *
+ * @param schema - type of schema which is defined using pug library
+ * @param handler - api handler method that is used to handle POST,
+ * GET, PUT or DELETE operation.
+ *
+ */
 export function validate(schema, handler) {
     return async (req, res) => {
         if (['POST'].includes(req.method)) {

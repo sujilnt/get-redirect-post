@@ -7,7 +7,7 @@ function Home() {
   const [value, setValue] = useState("");
   const [error, setError] = useState();
 
-  const onSubmit= async (e)=>{
+  const onSubmit= async (e) => {
       e.preventDefault();
       try{
          const response = await fetch(`${window.location.origin}/api/checknumber`,{
@@ -49,7 +49,9 @@ function Home() {
         <h3>Validate Number</h3>
         {!!error ? (
             <div className={styles.errorMessage}>
-                <p><span className={styles.capitalize}>{error.error}</span>: {error.message}</p>
+                <p><span className={styles.capitalize}>
+                    {error.error}</span>: {error.message}
+                </p>
             </div>
         ): null }
       <form onSubmit={onSubmit} className={styles.form}>

@@ -1,3 +1,3 @@
-import {number } from 'yup';
+import {number} from 'yup';
 
 export const NumberValidation = number().required();

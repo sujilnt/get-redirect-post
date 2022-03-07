@@ -3,17 +3,17 @@ import {NumberValidation} from "../../schemas/numberValidation";
 
 function handler(req, res) {
     try{
-        const {method} = req;
+        const {method,body} = req;
+
         switch (method) {
             case 'POST':
-                res.redirect(308, `/success/${req.body}`);
+                res.redirect(308, `/success/${body}`);
                 break;
             default:
-                res.setHeader('Allow', ['POST'])
                 res.status(405).end(`Method ${method} Not Allowed`)
         }
     }catch (e) {
-        console.error(e)
+        res.status(401);
     }
 }
 
